@@ -39,7 +39,7 @@ function App() {
     }
 
     async function save(){
-      const res = await fetch('http://localhost:4000/update',{
+      const res = await fetch('https://to-do-app-nzxx.vercel.app/update',{
         method:"POST",
         headers: { 'Content-Type': 'application/json' }, 
         body: JSON.stringify({ email, items }), 
@@ -54,7 +54,7 @@ function App() {
     }
 
     const getItems = async () => {
-      const res = await fetch('http://localhost:4000/items',{
+      const res = await fetch('https://to-do-app-nzxx.vercel.app/items',{
         headers:{
           email:email
         }

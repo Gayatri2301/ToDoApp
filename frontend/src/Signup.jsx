@@ -9,7 +9,7 @@ const Signup = () => {
   const clicked = async () => {
     try {
       if(password === confirm){
-        const res = await fetch('http://localhost:4000/register',{
+        const res = await fetch('https://to-do-app-nzxx.vercel.app/register',{
           method:"POST",
           headers:{
             'Content-Type':'application/json'

@@ -11,7 +11,7 @@ const Login = () => {
 
     const clicked = async () => {
         try {
-            const res = await fetch('http://localhost:4000/Login',{
+            const res = await fetch('https://to-do-app-nzxx.vercel.app/Login',{
                 method:"POST",
                 headers:{ "Content-Type":"application/JSON" },
                 body:JSON.stringify({
