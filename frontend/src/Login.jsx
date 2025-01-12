@@ -40,22 +40,45 @@ const Login = () => {
     }
 
     return (
-        <div className='flex justify-center items-center'>
-        <div className='flex flex-col justify-center items-center gap-2'>
-        <h1 className='mb-5 font-bold'>Login</h1>
-            <div>
-            <input className='border rounded' name="username" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}></input>
+        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+          <div className="flex flex-col justify-center items-center gap-4 bg-white shadow-lg p-6 rounded-lg w-96">
+            <h1 className="mb-5 text-2xl font-bold text-blue-600">Login</h1>
+            <div className="w-full">
+              <input
+                className="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                name="username"
+                placeholder="Email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
             </div>
-            <div >
-            <input  className='border rounded' name="username" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)}></input>
+            <div className="w-full">
+              <input
+                type="password"
+                className="border border-gray-300 rounded-lg w-full p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                name="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
-            <div>
-                <button className='border round bg-green-500' onClick={clicked}>Login</button>
+            <div className="w-full">
+              <button
+                className="w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition"
+                onClick={clicked}
+              >
+                Login
+              </button>
             </div>
-            <p>Don't have an account? <Link to={"/register"} className='text-blue-700'>Register</Link></p>
-            </div>
+            <p className="text-gray-600">
+              Don't have an account?{" "}
+              <Link to="/register" className="text-blue-700 hover:underline">
+                Register
+              </Link>
+            </p>
+          </div>
         </div>
-    )
+      );      
 }
 
 export default Login

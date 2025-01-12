@@ -10,7 +10,7 @@ import PrivateLayout from './PrivateLayout';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <div className='flex justify-center items-center h-96'>
+    <div className=''>
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Login/>}></Route>
