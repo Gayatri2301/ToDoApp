@@ -70,6 +70,7 @@ function App() {
     },[]);
 
     const logout = () => {
+      alert("Successfully logout");
       nav('/');
     }
 
