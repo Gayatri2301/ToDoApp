@@ -25,6 +25,7 @@ const Signup = () => {
           alert("User already exist");
           return
         }
+        alert('Successfully Register');
         nav('/dashboard')
         console.log(res);
       }
