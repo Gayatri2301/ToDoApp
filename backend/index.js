@@ -81,8 +81,11 @@ app.post('/register',async (req,res)=>{
     console.log(email,password);
     try {
         const doc = await collection.findOne({email});
+        console.log(doc);
+        
         if(doc){
-            res.status(201).send("User already exist");
+            res.status(400).send("User already exist");
+            return
         }
         const newUser = new collection({
             email,

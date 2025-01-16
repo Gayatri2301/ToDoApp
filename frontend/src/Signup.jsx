@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import Login from './Login';
+import { useNavigate } from 'react-router-dom';
 
 const Signup = () => {
 
   const [email,setEmail] = useState("");
   const [password,setPassword] = useState("");
   const [confirm,setConfirm] = useState("");
+  const nav = useNavigate();
   const clicked = async () => {
     try {
       if(password === confirm){
@@ -19,10 +21,16 @@ const Signup = () => {
             password,
           })
         })
+        if(res.status === 400){
+          alert("User already exist");
+          return
+        }
+        nav('/dashboard')
         console.log(res);
       }
     } catch (error) {
       console.log(error);
+      alert("Something went wrong");
     }
     
   }
