@@ -26,7 +26,7 @@ const Signup = () => {
           return
         }
         alert('Successfully Register');
-        nav('/dashboard')
+        nav('/')
         console.log(res);
       }
     } catch (error) {
