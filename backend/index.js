@@ -93,6 +93,7 @@ app.post('/register',async (req,res)=>{
             items:[]
         });
         newUser.save();
+        res.send("Register sucessfully")
     } catch (error) {
         console.log(error);
         res.status(500).send("server error");
